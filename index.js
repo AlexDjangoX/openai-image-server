@@ -19,8 +19,6 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname + '/build')));
 
-app.use(express.static(path.join(__dirname, 'public')));
-
 app.use('/openai', openaiRoutes);
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
